@@ -46,8 +46,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.linear:
-                mAppRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+            case R.id.horizontal_linear:
+                mAppRecyclerView.setLayoutManager(
+                        new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+                break;
+
+            case R.id.vertical_linear:
+                mAppRecyclerView.setLayoutManager(
+                        new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
                 break;
 
             case R.id.grid:
